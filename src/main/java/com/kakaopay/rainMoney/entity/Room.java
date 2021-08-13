@@ -22,13 +22,13 @@ public class Room {
     public static final String TABLE_NAME = "KP_TB_ROOM";
 
     @Id
-    @Column(length = 40)
+    @Column(length = 40, columnDefinition="아이디")
     private String id;
 
-    @Column(length = 100, nullable = false)
+    @Column(length = 100, nullable = false, columnDefinition="이름")
     private String name;
 
-    @Column(nullable = false)
+    @Column(nullable = false, columnDefinition="생성일자")
     @CreationTimestamp
     private LocalDateTime createdTime;
 }
